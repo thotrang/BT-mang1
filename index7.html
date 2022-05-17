@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="mang"></p>
+    <p id="sapXep"></p>
+    <script>
+        let arr = [];
+        let n = prompt("nhập số lượng phần tử trong mảng");
+        for (let i = 0; i < n; i++) {
+            let x = prompt("nhập phần tử vào mảng ");
+            arr.push(x);
+        }
+        document.getElementById('mang').innerHTML = arr;
+        function sapXep() {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i+1; j < arr.length; j++) {
+                    if (arr[i] < arr[j]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+        sapXep(arr);
+        document.getElementById('sapXep').innerHTML = arr;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tách mảng thành mảng số và mảng chữ
+        let arr = [15, 5, 'a', 'b', 'b', 91, 3, 5, 63, 7, 80, 9];
+        let arrNumber = [];
+        let arrString = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof arr[i] =="number") {
+                arrNumber.push(arr[i]);
+            }else{
+                arrString.push(arr[i]);
+            }
+        }
+        document.write(arrString+'</br>');
+        document.write(arrNumber);
+    </script>
+</body>
+
+</html>
